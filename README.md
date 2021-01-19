@@ -1,9 +1,9 @@
 # FoodRadar
 
-###### DÍA 2:
+## DÍA 2:
 
 
-###### DÍA 1:
+## DÍA 1:
 
 **Team members:** Lidia Garrigó y Josep Marti.
 
@@ -23,6 +23,6 @@ Hemos creado un kanban organzinado las tareas a realizar y planteado los wirefra
 
 **Pendiente:**
 
-Acabar wireframes.
-Crear proyecto ionic (estructura y routing inicial)
-Resolver dudas documentación EDAMAM y Food Central.
+* Acabar wireframes.
+* Crear proyecto ionic (estructura y routing inicial)
+* Resolver dudas documentación EDAMAM y Food Central.
