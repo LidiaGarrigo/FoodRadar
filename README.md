@@ -23,6 +23,6 @@ Hemos creado un kanban organzinado las tareas a realizar y planteado los wirefra
 
 **Pendiente:**
 
-Acabar wireframes.
-Crear proyecto ionic (estructura y routing inicial)
-Resolver dudas documentación EDAMAM y Food Central.
+* Acabar wireframes.
+* Crear proyecto ionic (estructura y routing inicial)
+* Resolver dudas documentación EDAMAM y Food Central.
