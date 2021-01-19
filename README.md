@@ -2,6 +2,19 @@
 
 ## DÍA 2:
 
+**¿Qué hemos hecho hoy?**
+* Creación y definición de la estructura de la app.
+* Reestructuración del diseño de la aplicación.
+* Definición de los wireframes de favoritos y profile.
+* Primera propuesta de Recetas, Scanner, SplashScreen y login.
+* Creación del poyecto ionic.
+* Routing inicial.
+
+**¿Qué haremos mañana?**
+* Incorporar primera propuesta del código de Recetas, Scanner, SplashScreen.
+* Revisar implementación de la api Edamam (opción buscador).
+* Solucionar problematica con la SplashScreen.
+* Preparar entorno del Login y Register(Firebase).
 
 ## DÍA 1:
 
@@ -26,3 +39,14 @@ Hemos creado un kanban organzinado las tareas a realizar y planteado los wirefra
 * Acabar wireframes.
 * Crear proyecto ionic (estructura y routing inicial)
 * Resolver dudas documentación EDAMAM y Food Central.
+
+## INFORMACIÓN APP:
+
+###### API
+* Rest Api utilizada **EDAMAM**: https://developer.edamam.com/
+
+###### Trello
+* Trello: https://trello.com/b/sBFZb7dS/kanban-foods
+
+###### Mockup
+* Mockup: 
