@@ -1,9 +1,41 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-button [routerLink]="['/user-tabs']">Accede</ion-button>
+
+  <h1 class="ion-text-center">Welcome to <br>Food Radar</h1>
+    
+  <form [formGroup]="myForm" (ngSubmit)="submit()">
+    
+      <ion-item>
+        <ion-label>Email:</ion-label>
+          <ion-input type="email" placeholder="ejemplo@gmail.com" formControlName="email"></ion-input>
+        </ion-item>
+
+        <span *ngIf="myForm.controls.email.errors && (myForm.controls.email.dirty || myForm.controls.email.touched)">
+          <ion-text color="danger" *ngIf="myForm.hasError('required', 'email')">Email address is required *</ion-text>
+          <ion-text color="danger" *ngIf="myForm.hasError('email', 'email')">The email address is badly formatted *</ion-text>
+        </span>
+        <ion-text color="danger" *ngIf="errorValidator == 1">Email doesn't exists *</ion-text>
+
+    <ion-item>
+      <ion-label>Password:</ion-label>
+        <ion-input type="password" placeholder="Introduzca la contraseña" formControlName="password"></ion-input>
+    </ion-item>
+
+    <span *ngIf="myForm.controls.password.errors && (myForm.controls.password.dirty || myForm.controls.password.touched)">
+      <ion-text color="danger" *ngIf="myForm.hasError('required', 'password')">Password is required *</ion-text>
+      <ion-text color="danger"pan *ngIf="myForm.hasError('pattern', 'password')">Password must be 7 characters including 1 uppercase letter and 1 lowercase letter *</ion-text>
+    </span>
+    <ion-text color="danger" *ngIf="errorValidator == 2">Password invalid *</ion-text>
+    <div class="boton">
+    <ion-button (click)="onLogin()" [disabled]="!myForm.valid">Login</ion-button>
+    <p>¿No tienes cuenta?</p>
+    <p [routerLink]="['/register']"><a>Regístrate</a></p>
+    </div>
+  </form>
+
 </ion-content>

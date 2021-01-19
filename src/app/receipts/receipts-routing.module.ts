@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: ReceiptsPage
+  },
+  {
+    path: 'detail-modal',
+    loadChildren: () => import('./detail-modal/detail-modal.module').then( m => m.DetailModalPageModule)
   }
 ];
 
