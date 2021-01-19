@@ -1,17 +1,15 @@
 # FoodRadar
 
-# DÍA 2:
+###### DÍA 2:
 
 
-# DÍA 1:
+###### DÍA 1:
 
-Team members:
+**Team members:** Lidia Garrigó y Josep Marti.
 
-Lidia Garrigó. Josep Marti.
+**Tema elegido:** aplicación Foodie.
 
-Tema elegido : aplicación Foodie.
-
-Justificación:
+**Justificación:**
 
 Hemos buscado un tema que motive a ambos y dónde podamos aplicar lo aprendido en el capitulo de IONIC.
 
@@ -23,7 +21,7 @@ Status:
 
 Hemos creado un kanban organzinado las tareas a realizar y planteado los wireframes de la app. También hemos comprobado la accessibilidad de las apis (datos) y creado una primera aproximación al escaner de barras.
 
-Pendientes:
+**Pendiente:**
 
 Acabar wireframes.
 Crear proyecto ionic (estructura y routing inicial)
