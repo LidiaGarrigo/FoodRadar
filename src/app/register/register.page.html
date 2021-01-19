@@ -5,5 +5,59 @@
 </ion-header>
 
 <ion-content>
+  <h1 class="ion-text-center">Ya falta poco...</h1>
+    
+  <form [formGroup]="registerForm">
+
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+        <ion-input type="text" placeholder="Nombre" formControlName="name"></ion-input>
+    </ion-item>
+
+    <span *ngIf="registerForm.controls.name.errors && (registerForm.controls.name.dirty || registerForm.controls.name.touched)">
+      <ion-text color="danger" *ngIf="registerForm.hasError('required', 'email')">Name is required *</ion-text>
+    </span>
+    
+      <ion-item>
+        <ion-label>Email:</ion-label>
+          <ion-input type="email" placeholder="ejemplo@gmail.com" formControlName="email"></ion-input>
+      </ion-item>
+
+        <span *ngIf="registerForm.controls.email.errors && (registerForm.controls.email.dirty || registerForm.controls.email.touched)">
+          <ion-text color="danger" *ngIf="registerForm.hasError('required', 'email')">Email address is required *</ion-text>
+          <ion-text color="danger" *ngIf="registerForm.hasError('email', 'email')">The email address is badly formatted *</ion-text>
+        </span>
+        <ion-text color="danger" *ngIf="errorValidator == 1">Email doesn't exists *</ion-text>
+
+    <ion-item>
+      <ion-label>Password:</ion-label>
+        <ion-input type="password" placeholder="Introduzca la contraseña" formControlName="password"></ion-input>
+    </ion-item>
+
+    <span *ngIf="registerForm.controls.password.errors && (registerForm.controls.password.dirty || registerForm.controls.password.touched)">
+      <ion-text color="danger" *ngIf="registerForm.hasError('required', 'password')">Password is required *</ion-text>
+      <ion-text color="danger"pan *ngIf="registerForm.hasError('pattern', 'password')">Password must be 7 characters including 1 uppercase letter and 1 lowercase letter *</ion-text>
+    </span>
+
+    <ion-item>
+      <ion-label>Confirm password:</ion-label>
+        <ion-input type="password" placeholder="Confirme la contraseña" formControlName="confirmPassword"></ion-input>
+    </ion-item>
+
+    <span *ngIf="registerForm.controls.confirmPassword.errors && (registerForm.controls.confirmPassword.dirty || registerForm.controls.confirmPassword.touched)">
+      <ion-text color="danger" *ngIf="registerForm.hasError('required', 'confirmPassword')">Password is required *</ion-text>
+      <ion-text color="danger"pan *ngIf="registerForm.hasError('pattern', 'confirmPassword')">Password must be 7 characters including 1 uppercase letter and 1 lowercase letter *</ion-text>
+    </span>
+    <span *ngIf="registerForm.controls.confirmPassword.value != registerForm.controls.password.value">
+      <ion-text color="danger" *ngIf='registerForm.controls.confirmPassword.value != registerForm.controls.password.value'>Password does not match the confirm password *</ion-text>
+    </span>
+
+    <div class="boton">
+    <ion-button (click)="createUser()" [disabled]="!registerForm.valid">Register</ion-button>
+    <p>¿Ya tienes cuenta?</p>
+    <p [routerLink]="['/login']"><a>Loguéate</a></p>
+    </div>
+  </form>
+
   <ion-button [routerLink]="['/user-tabs']">Accede</ion-button>
 </ion-content>
