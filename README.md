@@ -1,9 +1,9 @@
 # FoodRadar
 
-###### DÍA 2:
+## DÍA 2:
 
 
-###### DÍA 1:
+## DÍA 1:
 
 **Team members:** Lidia Garrigó y Josep Marti.
 
