@@ -25,7 +25,7 @@ import { environments } from 'src/environments/enviroments.backup';
     AppRoutingModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environments.firebaseConfig),
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     StatusBar,

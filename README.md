@@ -1,5 +1,20 @@
 # FoodRadar
 
+## DÍA 3:
+
+**¿Qué hemos hecho hoy?**
+* Conectar Firebase para la autentificación del Login y del Register.
+* Conectar la Api de recetas y mostrarlas en la página principal de la aplicación.
+* Buscar información sobre el Splash Screen e implementarlo. 
+* Crear un modal para ver el detalle de las recetas.
+- Bloqueos en el día de hoy:
+    1. Concepto confuso del Splash Screen, estabamos realizando una animación.
+
+**¿Qué haremos mañana?**
+* Revisar la funcionalidad de SplashScreen.
+* Crear la el Scanner de código de barras. 
+* Encontrar una ruta de Edamam que muestre el total de todas las recetas sin filtrar por nada.
+
 ## DÍA 2:
 
 **¿Qué hemos hecho hoy?**

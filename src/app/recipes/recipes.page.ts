@@ -1,4 +1,6 @@
+import { DetailModalPage } from './detail-modal/detail-modal.page';
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 import { RecipesService } from '../services/recipes.service';
 
 @Component({
@@ -8,28 +10,28 @@ import { RecipesService } from '../services/recipes.service';
 })
 export class RecipesPage implements OnInit {
 
-  
-/*   splash =true;
-  tabBarElement:any; */
+  public recipes = [];
 
-  public recipes =[]
+  constructor(
+    private RecipeService: RecipesService,
+    private modalController: ModalController, ) {  }
 
-  constructor(private RecipeService: RecipesService) { 
-/*     this.tabBarElement = document.querySelector('.tabbar')
- */
-  }
-
-/*   ionViewDidLoad(){
-    this.tabBarElement.style.display = 'none';
-    setTimeout(() => {
-      this.splash =false;
-      this.tabBarElement.style.display = 'flex';
-    },4000);
-  } */
-
-  ngOnInit() {
-    this.RecipeService.getRecipes$()
-    .subscribe((data)=> this.recipes = data.hits);
-  }
-
+    ngOnInit() {
+      this.RecipeService.getRecipes$()
+      .subscribe((data)=> this.recipes = data.hits);
+    }
+    
+    async openModal(){
+      const modal = await this.modalController.create({
+        component: DetailModalPage,
+        cssClass: 'my-custom-class',
+        componentProps: {
+          'firstName': 'Douglas',
+          'lastName': 'Adams',
+          'middleInitial': 'N'
+        }
+      });
+      await modal.present();
+      const { data } = await modal.onWillDismiss();
+    }
 }

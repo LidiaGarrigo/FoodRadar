@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-detail-modal',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailModalPage implements OnInit {
 
-  constructor() { }
+  constructor(private modalController: ModalController,) { }
 
   ngOnInit() {
+  }
+  async closeModal(){
+    await this.modalController.dismiss({
+    /*   'ion-card': this.X.value */
+    });
   }
 
 }
