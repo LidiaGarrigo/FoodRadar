@@ -1,7 +1,8 @@
-/* import { AngularFireAuth } from '@angular/fire/auth'; */
+import { AngularFireAuth } from '@angular/fire/auth';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-login',
@@ -17,9 +18,9 @@ export class LoginPage implements OnInit {
   errorValidator = 0;
 
   constructor(
-    /* public firebaseService: FirebaseService, */
+    public firebaseService: FirebaseService,
     private fb: FormBuilder,
-  /*   private auth: AngularFireAuth, */
+    private auth: AngularFireAuth,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -29,7 +30,7 @@ export class LoginPage implements OnInit {
     });
   }
   onLogin(){
-/*     const {email, password} = this.myForm.value;
+    const {email, password} = this.myForm.value;
     this.auth.signInWithEmailAndPassword(email, password)
     .then(() => this.router.navigate(['/user-tabs']))
     .catch((error) => {
@@ -40,7 +41,7 @@ export class LoginPage implements OnInit {
       }
       this.error = error.message;
       console.log(this.error);
-  }); */
+  });
   }
 
   submit(){

@@ -1,4 +1,4 @@
-/* import { AngularFireAuth } from '@angular/fire/auth'; */
+import { AngularFireAuth } from '@angular/fire/auth';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -13,7 +13,7 @@ export class RegisterPage implements OnInit {
   registerForm!: FormGroup;
   password = new FormControl('', [Validators.required]);
 
-  constructor(private fb: FormBuilder,/*  private auth: AngularFireAuth */ private router: Router) {
+  constructor(private fb: FormBuilder, private auth: AngularFireAuth, private router: Router) {
 
   }
 
@@ -27,11 +27,11 @@ export class RegisterPage implements OnInit {
     });
   }
   createUser(){
-/*     const{email, password} = this.registerForm.value;
+    const{email, password} = this.registerForm.value;
     this.auth.createUserWithEmailAndPassword(email, password).then(user => {
       console.log('RegisterComponent => createUser => user', user);
-      this.router.navigate(['/task-list']);
-    }) */
+      this.router.navigate(['/user-tabs']);
+    })
     console.log(this.registerForm.value);
 
   }
