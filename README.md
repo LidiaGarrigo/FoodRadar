@@ -3,12 +3,12 @@
 ## DÍA 3:
 
 **¿Qué hemos hecho hoy?**
-* Conectar Firebase para la autentificación del Login y del Register.
+* Conectar Firebase para la autenticación del Login y del Register.
 * Conectar la Api de recetas y mostrarlas en la página principal de la aplicación.
 * Buscar información sobre el Splash Screen e implementarlo. 
 * Crear un modal para ver el detalle de las recetas.
 - Bloqueos en el día de hoy:
-    1. Concepto confuso del Splash Screen, estabamos realizando una animación.
+    1. Concepto confuso del Splash Screen, estábamos realizando una animación.
 
 **¿Qué haremos mañana?**
 * Revisar la funcionalidad de SplashScreen.
@@ -64,4 +64,4 @@ Hemos creado un kanban organzinado las tareas a realizar y planteado los wirefra
 * Trello: https://trello.com/b/sBFZb7dS/kanban-foods
 
 ###### Mockup
-* Mockup: 
+* Mockup: https://slides.com/lidia-1/day-3
