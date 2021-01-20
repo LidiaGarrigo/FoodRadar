@@ -9,8 +9,8 @@ const routes: Routes = [
     component: UserTabsPage,
     children: [
       {
-        path: 'receipts',
-        loadChildren: () => import('../receipts/receipts.module').then(m => m.ReceiptsPageModule)
+        path: 'recipes',
+        loadChildren: () => import('../recipes/recipes.module').then(m => m.ReceiptsPageModule)
       },
       {
         path: 'scanner',
@@ -26,14 +26,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/user-tabs/receipts',
+        redirectTo: '/user-tabs/recipes',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/user-tabs/receipts',
+    redirectTo: '/user-tabs/recipes',
     pathMatch: 'full'
   }
 

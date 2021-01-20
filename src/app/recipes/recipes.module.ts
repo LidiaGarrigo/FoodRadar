@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ReceiptsPageRoutingModule } from './receipts-routing.module';
+import { ReceiptsPageRoutingModule } from './recipes-routing.module';
 
-import { ReceiptsPage } from './receipts.page';
+import { RecipesPage } from './recipes.page';
 
 @NgModule({
   imports: [
@@ -15,6 +15,6 @@ import { ReceiptsPage } from './receipts.page';
     IonicModule,
     ReceiptsPageRoutingModule
   ],
-  declarations: [ReceiptsPage]
+  declarations: [RecipesPage]
 })
 export class ReceiptsPageModule {}

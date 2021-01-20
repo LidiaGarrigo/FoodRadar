@@ -11,7 +11,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FilterPipe } from './pipes/filter.pipe';
 import { AngularFireModule } from '@angular/fire';
+
+import { HttpClientModule } from '@angular/common/http';
 import { environments } from 'src/environments/enviroments.backup';
+
 
 @NgModule({
   declarations: [AppComponent, FilterPipe],
@@ -22,6 +25,7 @@ import { environments } from 'src/environments/enviroments.backup';
     AppRoutingModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environments.firebaseConfig),
+    HttpClientModule
   ],
   providers: [
     StatusBar,
