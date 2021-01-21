@@ -3,14 +3,26 @@
 }
 form{
     padding: 2vh;
+    ion-item{
+        margin-top: 3vh;
+    }
     .boton{
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 4vh;
-    }
-    .registrate{
-        cursor: pointer;
+        ion-button{
+            --background: #37784E;
+            margin: 2vh;
+        }
+        ion-button:hover{
+            --background: #E1EFE2;
+            --color: #37784E;
+        }
+        .registrate{
+            cursor: pointer;
+            margin: 0;
+        }
     }
 
 }

@@ -1,12 +1,27 @@
+.ion-text-center{
+    color: green;
+}
 form{
     padding: 2vh;
+ion-item{
+    margin-top: 2vh;
+}
 .boton{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 4vh;
+    margin-top: 3vh;
+    ion-button{
+        --background: #37784E;
+        margin: 2vh;
+    }
+    ion-button:hover{
+        --background: #E1EFE2;
+        --color: #37784E;
+    }
 }
 .logueate{
     cursor: pointer;
+    margin: 0;
 }
 }

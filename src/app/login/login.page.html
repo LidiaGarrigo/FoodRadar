@@ -1,18 +1,14 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+<div class="titulo">
   <h1 class="ion-text-center">Welcome to <br>Food Radar</h1>
+</div>
+  
     
   <form [formGroup]="myForm" (ngSubmit)="submit()">
     
       <ion-item>
         <ion-label position='floating'>Email:</ion-label>
-          <ion-input type="email" placeholder="ejemplo@gmail.com" formControlName="email"></ion-input>
+          <ion-input type="email" placeholder="example@gmail.com" formControlName="email"></ion-input>
         </ion-item>
 
         <span *ngIf="myForm.controls.email.errors && (myForm.controls.email.dirty || myForm.controls.email.touched)">
@@ -23,7 +19,7 @@
 
     <ion-item>
       <ion-label position='floating'>Password:</ion-label>
-        <ion-input type="password" placeholder="Introduzca la contraseña" formControlName="password"></ion-input>
+        <ion-input type="password" placeholder="Enter the password" formControlName="password"></ion-input>
     </ion-item>
 
     <span *ngIf="myForm.controls.password.errors && (myForm.controls.password.dirty || myForm.controls.password.touched)">
@@ -32,9 +28,9 @@
     </span>
     <ion-text color="danger" *ngIf="errorValidator == 2">Password invalid *</ion-text>
     <div class="boton">
-    <ion-button (click)="onLogin()" [disabled]="!myForm.valid" >Login</ion-button>
-    <p>¿No tienes cuenta?</p>
-    <p class="registrate" [routerLink]="['/register']"><a>Regístrate</a></p>
+      <ion-button (click)="onLogin()" [disabled]="!myForm.valid" >Login</ion-button>
+      <p>You do not have an account?</p>
+      <p class="registrate" [routerLink]="['/register']"><a>Sign up</a></p>
     </div>
   </form>
 
