@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAA;EACF,YAAY,CAAA,QAAC;EACb,OAAO,CAAA,MAAC;CAMX;;AARD,AAGI,MAHE,CAGF,OAAO,CAAA;EACH,WAAW,EAAE,GAAG;EAChB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,OAAO;CAClB;;AAEL,AAAA,QAAQ,CAAA;EACJ,MAAM,EAAE,OAAO;CAClB",
-    "sources": [
-        "recipes.page.scss"
-    ],
-    "names": [],
-    "file": "recipes.page.css"
-}
