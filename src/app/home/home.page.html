@@ -1,15 +1,13 @@
-
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Food Radar
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <div id="container">
-    <ion-button routerLink="/login">Login</ion-button>
-    <ion-button routerLink="/register">Register</ion-button>
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="container">
+    <div class="titulo">
+      <h1 class="ion-text-center">Welcome to</h1>
+      <img src="assets//icon//nameApp.png" alt="" style="width: 250px;">
+    </div>
+    <img src="assets/icon/radar.png" alt="" style="width: 200px;">
+    <div class="botones">
+      <ion-button routerLink="/login">Login</ion-button>
+      <ion-button routerLink="/register">Register</ion-button>
+    </div>
   </div>
 </ion-content>
