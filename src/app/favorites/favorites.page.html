@@ -1,6 +1,14 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Favorites</ion-title>
+  <ion-toolbar class="fondo">
+    <div no-padding no-margin style='float:left'>
+        <img src="assets/icon/avatar.png" class="avatar" [routerLink]='["/user-tabs/profile"]'>
+      </div> 
+    <ion-title class="ion-text-center">Favorites</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button (click)="onLogout()" routerLink="/home">
+        <ion-icon name="log-out-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

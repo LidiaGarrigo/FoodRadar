@@ -9,12 +9,12 @@
 
 <ion-header>
   <ion-toolbar class="fondo">
-    <ion-avatar slot="start">
-      <img src="assets/icon/avatar.png" style="margin-left: 2vh;">
-    </ion-avatar>
-    <ion-title class="ion-text-center">RECIPES</ion-title>
-    <ion-buttons slot="end">
-      <ion-button>
+    <div no-padding no-margin style='float:left'>
+        <img src="assets/icon/avatar.png" class="avatar" [routerLink]='["/user-tabs/profile"]'>
+      </div> 
+    <ion-title class="ion-text-center">Recipes</ion-title>
+    <ion-buttons slot="end" >
+      <ion-button (click)="onLogout()" routerLink="/home">
         <ion-icon name="log-out-outline" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-buttons>

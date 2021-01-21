@@ -1,3 +1,4 @@
+import { FirebaseService } from 'src/app/services/firebase.service';
 import { DetailModalPage } from './detail-modal/detail-modal.page';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSearchbar, ModalController } from '@ionic/angular';
@@ -14,15 +15,16 @@ export class RecipesPage implements OnInit {
 
   public recipes = [];
   
+  
   constructor(
     private RecipeService: RecipesService,
-    private modalController: ModalController, ) {  }
-    private searchItem: any;
+    private modalController: ModalController,
+    private fs: FirebaseService) {  }
 
     ngOnInit() {
       this.RecipeService.getRecipes$()
       .subscribe((data) => this.recipes = data.hits);
-      this.searchItem = this.recipes;
+      /* this.searchItem = this.recipes; */
     }
 
     ionViewDidEnter(){
@@ -61,5 +63,7 @@ export class RecipesPage implements OnInit {
     }
     onSelectedOption(){}
 
-    
+    onLogout() {
+      this.fs.logout();
+    }
 }

@@ -1,3 +1,4 @@
+import { FirebaseService } from 'src/app/services/firebase.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritesPage implements OnInit {
 
-  constructor() { }
+  constructor(private fs: FirebaseService) { }
 
   ngOnInit() {
+  }
+  onLogout() {
+    this.fs.logout();
   }
 
 }

@@ -1,9 +1,9 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Details</ion-title>
+<ion-header >
+  <ion-toolbar class="fondo">
+    <ion-title>{{recipt.recipe.label}}</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="closeModal()" color="success">
-        <ion-icon name="close-circle" slot="icon-only"></ion-icon>
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close-circle-outline" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -11,16 +11,16 @@
 
 <ion-content>
   <ion-card>
-    <img src="{{recipt.recipe.image}}"/>
+    <img src="{{recipt.recipe.image}}" style="width: 100%;"/>
     <ion-card-content>
       <ion-card-title>
         {{recipt.recipe.label}}
       </ion-card-title>
-      <p>Calories: {{recipt.recipe.calories}}.</p>
-      <p>Ingredients:</p>
-      <div *ngFor="let ingredient of recipt.recipe.ingredients">
-        <p> {{ingredient.text}}</p>
-      </div>
+      <br><p><strong>Calories:</strong> {{recipt.recipe.calories}}.</p>
+      <p><strong>Ingredients:</strong> </p>
+      <ul *ngFor="let ingredient of recipt.recipe.ingredients">
+        <li> {{ingredient.text}}</li>
+      </ul>
     </ion-card-content>
   </ion-card>
 </ion-content>
