@@ -1,0 +1,41 @@
+.ion-text-center {
+  color: green;
+}
+
+form {
+  padding: 2vh;
+}
+
+form ion-item {
+  margin-top: 3vh;
+}
+
+form .boton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4vh;
+}
+
+form .boton ion-button {
+  --background: #37784E;
+  margin: 2vh;
+}
+
+form .boton ion-button:hover {
+  --background: #E1EFE2;
+  --color: #37784E;
+}
+
+form .boton .registrate {
+  cursor: pointer;
+  margin: 0;
+}
+/*# sourceMappingURL=login.page.css.map */

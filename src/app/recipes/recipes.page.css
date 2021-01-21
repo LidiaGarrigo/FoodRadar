@@ -1,0 +1,15 @@
+.fondo {
+  --background: #37784E;
+  --color: white;
+}
+
+.fondo .avatar {
+  margin-left: 2vh;
+  width: 32px;
+  cursor: pointer;
+}
+
+ion-card {
+  cursor: pointer;
+}
+/*# sourceMappingURL=recipes.page.css.map */

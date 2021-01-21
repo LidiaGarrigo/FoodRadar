@@ -1,0 +1,59 @@
+.fondo {
+  --background: #2C7FB9;
+}
+
+.fondo .container {
+  margin-top: 4vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fondo .container .titulo {
+  width: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4vh;
+}
+
+.fondo .container .titulo .ion-text-center {
+  color: white;
+}
+
+.fondo .container .botones {
+  width: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3vh;
+}
+
+.fondo .container .botones ion-button {
+  --background: #37784E;
+  margin: 2vh;
+}
+
+.fondo .container .botones ion-button:hover {
+  --background: #E1EFE2;
+  --color: #37784E;
+}
+/*# sourceMappingURL=home.page.css.map */
