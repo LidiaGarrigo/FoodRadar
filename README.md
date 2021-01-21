@@ -1,5 +1,19 @@
 # FoodRadar
 
+## DÍA 4:
+
+**¿Qué hemos hecho hoy?**
+* Mostrar información en el modal según la receta seleccionada.
+* Probar diferentes maneras de hacer Search con la barra del buscador. 
+* Estilar la app. 
+* Hemos acabado al diseño del modal.
+* Hemos realizado el diseño de la home. 
+* Hemos investigado cómo implementar el Scanner y que detecte el código de barras. 
+
+**¿Qué haremos mañana?**
+* Crear la el Scanner de código de barras. 
+* Crear la página de perfil.
+
 ## DÍA 3:
 
 **¿Qué hemos hecho hoy?**
