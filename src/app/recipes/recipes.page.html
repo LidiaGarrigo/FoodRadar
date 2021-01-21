@@ -13,13 +13,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-searchbar showCancelButton="never"></ion-searchbar>
+<ion-searchbar #search showCancelButton="never" debounce='500' (ionChange)="buscar($event)" (onSelectedOption)="onSelectedOption($event)"></ion-searchbar>
 
 <ion-content>
   <ion-grid>
     <ion-row>
       <ion-col size-lg='3' size-md='4' size-sm='6' size='12' *ngFor="let recipt of recipes" >
-<ion-card (click)="openModal()"> 
+<ion-card (click)="openModal(recipt)"> 
   <img src='{{recipt.recipe.image}}'alt="">
   <ion-card-header>
     <ion-card-title>{{recipt.recipe.label}}</ion-card-title>

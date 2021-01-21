@@ -1,20 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { RecipesInt } from './../../interfaces/RecipesInt';
+import { Component, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { RecipesService } from 'src/app/services/recipes.service';
+
 
 @Component({
   selector: 'app-detail-modal',
   templateUrl: './detail-modal.page.html',
   styleUrls: ['./detail-modal.page.scss'],
 })
-export class DetailModalPage implements OnInit {
-  public recipes = [];
-  constructor(private modalController: ModalController,private RecipeService: RecipesService,) { }
+export class DetailModalPage {
 
-  ngOnInit() {
-    this.RecipeService.getRecipes$()
-      .subscribe((data)=> this.recipes = data.hits);
-  }
+@Input() recipt: any;
+  
+  constructor(
+    private modalController: ModalController) { }
+
   async closeModal(){
     await this.modalController.dismiss({
     /*   'ion-card': this.X.value */

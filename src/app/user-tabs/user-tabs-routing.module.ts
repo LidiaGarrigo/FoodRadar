@@ -10,7 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: 'recipes',
-        loadChildren: () => import('../recipes/recipes.module').then(m => m.ReceiptsPageModule)
+        loadChildren: () => import('../recipes/recipes.module').then(m => m.RecipesPageModule)
       },
       {
         path: 'scanner',
