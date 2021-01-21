@@ -10,5 +10,17 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-card *ngFor="let recipt of recipes">
+    <img src="{{recipt.recipe.image}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{recipt.recipe.label}}
+      </ion-card-title>
+      <p>Calories: {{recipt.recipe.calories}}.</p>
+      <p>Ingredients:</p>
+      <div *ngFor="let ingredient of recipt.recipe.ingredients">
+        <p> {{ingredient.text}}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

@@ -32,9 +32,9 @@
     </span>
     <ion-text color="danger" *ngIf="errorValidator == 2">Password invalid *</ion-text>
     <div class="boton">
-    <ion-button (click)="onLogin()" [disabled]="!myForm.valid">Login</ion-button>
+    <ion-button (click)="onLogin()" [disabled]="!myForm.valid" >Login</ion-button>
     <p>¿No tienes cuenta?</p>
-    <p [routerLink]="['/register']"><a>Regístrate</a></p>
+    <p class="registrate" [routerLink]="['/register']"><a>Regístrate</a></p>
     </div>
   </form>
 
