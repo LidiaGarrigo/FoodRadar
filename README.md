@@ -9,6 +9,7 @@
 * Hemos acabado al diseño del modal.
 * Hemos realizado el diseño de la home. 
 * Hemos investigado cómo implementar el Scanner y que detecte el código de barras. 
+* Hemos buscado información de como hacer favoritos por usuario.
 
 **¿Qué haremos mañana?**
 * Crear la el Scanner de código de barras. 
