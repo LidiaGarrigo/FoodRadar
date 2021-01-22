@@ -1,10 +1,10 @@
 <ion-header>
   <ion-toolbar class="fondo">
     <div no-padding no-margin style='float:left'>
-        <img src="assets/icon/avatar.png" class="avatar" [routerLink]='["/user-tabs/profile"]'>
-      </div> 
+      <img src="assets/icon/avatar.png" class="avatar" [routerLink]='["/user-tabs/profile"]'>
+    </div>
     <ion-title class="ion-text-center">Profile</ion-title>
-    <ion-buttons slot="end" >
+    <ion-buttons slot="end">
       <ion-button (click)="onLogout()" routerLink="/home">
         <ion-icon name="log-out-outline" slot="icon-only"></ion-icon>
       </ion-button>
@@ -12,5 +12,41 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<!-- PROFILE FOTO & CAMERA-->
+
+<ion-content class='profile'>
+  <ion-card>
+    <ion-card-header>
+      <ion-avatar>
+        <img *ngIf='!img' src={{avatar}}>
+        <img *ngIf='img' [src]="img">
+      </ion-avatar>
+      <ion-card-subtitle color="primary" (click)="addPhoto()">ADD PHOTO</ion-card-subtitle>
+    </ion-card-header>
+
+    <!-- FORMULARIO-->
+    <ion-card-content>
+      <div class="datos" *ngIf='!mostrar'>
+        <h1>Name</h1>
+        <h2>Surname</h2>
+        <h2>Email</h2>
+        <br>
+      </div>
+      <form [formGroup]="profileForm" (ngSubmit)="logForm()" *ngIf='mostrar'>
+        <ion-item>
+          <ion-input placeholder='Name' type="text" formControlName="firstName"></ion-input>
+        </ion-item>
+        <ion-item>
+
+          <ion-input placeholder='Surname' type="text" formControlName="lastName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder='Email' type="text" formControlName="email"></ion-input>
+        </ion-item>
+        <input type="hidden" formControlName='image'>
+      </form>
+      <ion-button expand='block' fill='outline' *ngIf='!mostrar' (click)="edit()">EDIT</ion-button>
+      <ion-button expand='block' fill='outline' type="submit" [disabled]="!profileForm.valid" *ngIf='mostrar'>Submit</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
