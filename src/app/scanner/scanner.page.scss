@@ -7,3 +7,15 @@
         cursor: pointer;
     }
 }
+ion-card{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    padding-bottom: 3vh;
+    ion-button{
+        width: 30vh;
+    }
+    .scanner{
+        width: 40vh;
+    }
+}

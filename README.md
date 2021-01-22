@@ -1,5 +1,16 @@
 # FoodRadar
 
+## DÍA 5:
+
+**¿Qué hemos hecho hoy?**
+* Crear la página de perfil.
+* Hacer la funcionalidad del search en la barra del buscador, filtrando por lo introducido por el usuario.
+* Hemos creado la página del Scanner. 
+
+**¿Qué haremos mañana?**
+* Mejorar la funcionalidad del Scanner de código de barras. 
+* Crear la página de favoritos.
+
 ## DÍA 4:
 
 **¿Qué hemos hecho hoy?**

@@ -12,6 +12,41 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-img src="assets/icon/codigo.jpg" style="width: 350px;"></ion-img>
+  
+  <ion-button (click)='startScan()' color='warning'>
+    <ion-icon name="barcode-outline"></ion-icon>
+    &nbsp;Scan Me!
+  </ion-button>
+  <ion-button (click)='reset()' color='warning' *ngIf='scanResult'>
+    <ion-icon name="refresh-outline"></ion-icon>
+    &nbsp;Reset
+</ion-button>
 
+<ion-button routerLink='/recipes' color='warning'>
+  <ion-icon name="receipt-outline"></ion-icon>
+  &nbsp;Recipes
+</ion-button>
+<ion-button (click)='stopScan()' color='warning' *ngIf='scanActive'>
+  <ion-icon name="stop-circle-outline"></ion-icon>
+  &nbsp;Stop Me!
+</ion-button>
+<div class="scanner">
+  <video #video [hidden]="!scanActive" width='100%'></video>
+  <canvas #canvas hidden></canvas>
+</div>
+
+</ion-card>
+
+
+<ion-card *ngIf='scanResult'>
+<ion-card-header>
+<ion-card-title> QR Code</ion-card-title> 
+</ion-card-header>
+<ion-card-content>
+{{scanResult}}
+</ion-card-content>
+</ion-card>
 </ion-content>
