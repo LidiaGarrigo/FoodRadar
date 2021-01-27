@@ -36,7 +36,14 @@ export class ScannerService {
     }
   
     return false;
+  }
+  stopScanner(){
+    const stopScan = () => {
+      const { BarcodeScanner } = Plugins;
+      BarcodeScanner.showBackground();
+      BarcodeScanner.stopScan();
   };
 
 
+}
 }

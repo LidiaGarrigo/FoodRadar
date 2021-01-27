@@ -1,5 +1,29 @@
 # FoodRadar
 
+## DÍA 9:
+
+**¿Qué hemos hecho hoy?**
+* Funcionalidad de favoritos.
+* Búsqueda de recetas por defecto y al introducir una palabra y darle a intro.
+* Cambiar la funcionalidad de Scanner de QR a código de barras.
+
+**¿Qué haremos mañana?**
+
+* Crear funcionalidad para parar de escanear.
+* Pintar el array de Favoritos en el apartado correspondiente.
+* Extraer datos de Firebase para el perfil.
+
+## DÍA 8:
+
+**¿Qué hemos hecho hoy?**
+* Splash Screen.
+* Cambiar icono app.
+
+**¿Qué haremos mañana?**
+* Guardar en un array las recetas marcadas como favoritas y pintarlas en el apartado correspondiente.
+* Autorefresh de la página para que al darle intro se genere la búsqueda de recetas.
+
+
 ## DÍA 7:
 
 **¿Qué hemos hecho hoy?**

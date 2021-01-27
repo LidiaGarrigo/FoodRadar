@@ -29,8 +29,11 @@ export class ScannerPage implements OnInit {
       console.log('Error', err);
     }); */
 }
-scann(){
+scan(){
   this.scannerService.startScan();
+}
+stopScan() {
+  this.scannerService.stopScanner();
 }
 
 /*   scan() {

@@ -51,18 +51,18 @@
 </ion-card> -->
 
   
-<div class="contenedor">
-
-  <ion-img src="assets/icon/codigo.jpg" style="width: 200px;"></ion-img>
-</div>
 <div class="square surround-cover">
   <div class="barcode-scanner--area--outer surround-cover">
     <div class="barcode-scanner--area--inner"></div>
       </div>
 </div>
-<ion-button (click)='scann()' color='warning' expand='full'>
+<ion-button (click)='scan()' color='warning' expand='full'>
   <ion-icon name="barcode-outline"></ion-icon>
   &nbsp;Scan!
+</ion-button>
+<ion-button (click)='stopScan()' color='warning' expand='full'>
+  <ion-icon name="stop-circle-outline"></ion-icon>
+  &nbsp;Stop Me!
 </ion-button>
 
 </ion-content>
