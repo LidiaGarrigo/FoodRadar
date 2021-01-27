@@ -13,7 +13,7 @@ import { ScannerPage } from './scanner.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ScannerPageRoutingModule
+    ScannerPageRoutingModule, 
   ],
   declarations: [ScannerPage]
 })

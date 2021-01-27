@@ -1,6 +1,6 @@
-import { RecipesInt } from './../../interfaces/RecipesInt';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { FavoriteService } from 'src/app/services/favorite.service';
 
 
 @Component({
@@ -8,17 +8,41 @@ import { ModalController } from '@ionic/angular';
   templateUrl: './detail-modal.page.html',
   styleUrls: ['./detail-modal.page.scss'],
 })
-export class DetailModalPage {
+export class DetailModalPage implements OnInit{
 
-@Input() recipt: any;
-  
+  favorites: any[] = [];
+
+  @Input() recipt: any;
+  @Input() receta: any;
+
+  storage: any;
+  favorite: boolean = false;
+
   constructor(
-    private modalController: ModalController) { }
+    private modalController: ModalController, private favoriteService: FavoriteService) {
 
-  async closeModal(){
+  }
+  ngOnInit() {
+    console.log(this.receta);
+    this.favoriteService.isFavorite(this.recipt.recipe.label).then((data) => this.favorite = data);
+  }
+
+  async closeModal() {
     await this.modalController.dismiss({
-    /*   'ion-card': this.X.value */
+      /*   'ion-card': this.X.value */
     });
+  }
+
+  addToFavorites() {
+    this.favorite = true;
+    console.log('adding to fav', this.recipt.recipe.label);
+    this.favoriteService.addFavorite(this.recipt.recipe.label);
+    console.log('fav', this.favorite);
+  }
+  deleteFav() {
+    this.favorite = false;
+    this.favoriteService.deleteFavorite(this.recipt.recipe.label);
+    console.log(this.recipt.recipe.label);
   }
 
 }

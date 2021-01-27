@@ -1,3 +1,4 @@
+import { DetailModalPage } from './detail-modal/detail-modal.page';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -16,8 +17,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     FormsModule,
     IonicModule,
     RecipesPageRoutingModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
   ],
-  declarations: [RecipesPage]
+  declarations: [RecipesPage, DetailModalPage]
 })
 export class RecipesPageModule {}

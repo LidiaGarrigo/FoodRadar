@@ -11,21 +11,24 @@
 
 <ion-content>
   <ion-card>
-    <img src="{{recipt.recipe.image}}" style="width: 100%;"/>
+    <img src="{{recipt.recipe?.image}}" style="width: 100%;"/>
     <ion-card-content>
       <ion-card-title>
-        {{recipt.recipe.label}} 
+        {{recipt.recipe?.label}} 
       </ion-card-title>
         <ion-buttons style="float: right;">
-          <ion-button>
-            <ion-icon name="heart-outline" slot="icon-only"></ion-icon>
+          <ion-button [hidden]='favorite' (click)="addToFavorites()">
+            <ion-icon name="heart-outline" slot="icon-only" color="danger" ></ion-icon>
+          </ion-button>
+          <ion-button *ngIf='favorite' (click)="deleteFav()" > <!-- (click)="deleteFav()" -->
+            <ion-icon name="heart" slot="icon-only" color="danger"></ion-icon>
           </ion-button>
         </ion-buttons>
       
-      <br><p><strong>Calories:</strong> {{recipt.recipe.calories}}.</p>
+      <br><p><strong>Calories:</strong> {{recipt.recipe?.calories}}.</p>
       <p><strong>Ingredients:</strong> </p>
-      <ul *ngFor="let ingredient of recipt.recipe.ingredients">
-        <li> {{ingredient.text}}</li>
+      <ul *ngFor="let ingredient of recipt.recipe?.ingredients">
+        <li> {{ingredient?.text}}</li>
       </ul>
     </ion-card-content>
   </ion-card>

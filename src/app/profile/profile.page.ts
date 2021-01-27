@@ -17,7 +17,7 @@ export class ProfilePage implements OnInit {
   profileForm: FormGroup;
   avatar = 'assets/icon/avatar.png';
   mostrar: boolean;
-  
+
   constructor(
     private fs: FirebaseService,
     public modalController: ModalController,

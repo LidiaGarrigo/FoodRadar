@@ -1,7 +1,10 @@
+import { ScannerService } from './../services/Scanner.service';
 import { FirebaseService } from 'src/app/services/firebase.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { LoadingController, ToastController } from '@ionic/angular';
-import jsQR from 'jsqr';
+/* import jsQR from 'jsqr';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx'; */
+
 
 @Component({
   selector: 'app-scanner',
@@ -9,47 +12,68 @@ import jsQR from 'jsqr';
   styleUrls: ['./scanner.page.scss'],
 })
 export class ScannerPage implements OnInit {
-
+  data: any;
   constructor(
-    private fs: FirebaseService, 
-    private toastCtrl: ToastController, 
-    private loadingCtrl: LoadingController) { }
+    private fs: FirebaseService,
+    private toastCtrl: ToastController,
+    private loadingCtrl: LoadingController,
+    private scannerService: ScannerService) { }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+    
+    /* throw new Error('Method not implemented.'); */
+
+/*     this.barcodeScanner.scan().then(barcodeData => {
+      console.log('Barcode data', barcodeData);
+    }).catch(err => {
+      console.log('Error', err);
+    }); */
+}
+scann(){
+  this.scannerService.startScan();
+}
+
+/*   scan() {
+    this.data = null;
+    this.barcodeScanner.scan().then(barcodeData => {
+      console.log('Barcode data', barcodeData);
+      this.data = barcodeData;
+    }).catch(err => {
+      console.log('Error', err);
+    });
+  } */
 
   onLogout() {
     this.fs.logout();
   }
 
-  scanActive = false;
+ /* scanActive = false;
   scanResult = null;
-  
-  @ViewChild('video',{static: false}) video: ElementRef;
-  @ViewChild('canvas',{static: false}) canvas: ElementRef;
+
+  @ViewChild('video', { static: false }) video: ElementRef;
+  @ViewChild('canvas', { static: false }) canvas: ElementRef;
 
   videoElement: any;
   canvasElement: any;
   loading: HTMLIonLoadingElement;
-  canvasContext:any;
+  canvasContext: any;
+ */
 
 
-
-  ngAfterViewInit(){
+  /* ngAfterViewInit() {
     this.videoElement = this.video.nativeElement;
     this.canvasElement = this.canvas.nativeElement;
     this.canvasContext = this.canvasElement.getContext('2d');
   }
 
-  async startScan(){
+  async startScan() {
     const stream = await navigator.mediaDevices.getUserMedia({
-      video: {facingMode:'environment'}
+      video: { facingMode: 'environment' }
     });
 
     this.videoElement.srcObject = stream;
     this.videoElement.setAttribute('playinline', true);
-    this.videoElement.play(); 
+    this.videoElement.play();
     this.loading = await this.loadingCtrl.create({});
     await this.loading.present();
 
@@ -57,13 +81,13 @@ export class ScannerPage implements OnInit {
   }
 
 
-  async scan(){
+  async scan() {
     console.log('SCAN');
-    if(this.videoElement.readyState === this.videoElement.HAVE_ENOUGH_DATA){
-      if (this.loading){
+    if (this.videoElement.readyState === this.videoElement.HAVE_ENOUGH_DATA) {
+      if (this.loading) {
         await this.loading.dismiss();
         this.loading = null;
-        this.scanActive =true;
+        this.scanActive = true;
       }
 
       this.canvasElement.height = this.videoElement.videoHeight;
@@ -84,19 +108,19 @@ export class ScannerPage implements OnInit {
         this.canvasElement.height
       );
 
-      const code = jsQR(imageData.data, imageData.width, imageData.height,{
-        inversionAttempts:'dontInvert'
+      const code = jsQR(imageData.data, imageData.width, imageData.height, {
+        inversionAttempts: 'dontInvert'
       });
 
       console.log('code: ', code);
 
-      if(code){
+      if (code) {
         this.scanActive = false;
         this.scanResult = code.data;
         this.showQrToast();
-      
-      }else{
-        if(this.scanActive){
+
+      } else {
+        if (this.scanActive) {
           requestAnimationFrame(this.scan.bind(this));
         }
       }
@@ -106,27 +130,27 @@ export class ScannerPage implements OnInit {
     }
   }
 
-  reset(){
-    this.scanResult=null;
+  reset() {
+    this.scanResult = null;
   }
 
-  stopScan(){
+  stopScan() {
     this.scanActive = false;
   }
 
-  async showQrToast(){
+  async showQrToast() {
     const toast = await this.toastCtrl.create({
-      message:`Open ${this.scanResult}?`,
+      message: `Open ${this.scanResult}?`,
       position: 'top',
-      buttons:[{
-        text:'Open',
-        handler:()=>{
-          window.open(this.scanResult,'_system','location=yes')
+      buttons: [{
+        text: 'Open',
+        handler: () => {
+          window.open(this.scanResult, '_system', 'location=yes')
         }
       }]
     });
     toast.present();
-  }
+  }  */
 }
 
 

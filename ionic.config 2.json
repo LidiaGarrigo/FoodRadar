@@ -1,0 +1,7 @@
+{
+  "name": "FoodRadar",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

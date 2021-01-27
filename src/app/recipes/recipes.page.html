@@ -12,12 +12,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-searchbar #search showCancelButton="never" debounce='500'[(ngModel)]="filterTerm"></ion-searchbar>
+<ion-searchbar #inputSearch showCancelButton="never" (keyup.enter)="onSearch(inputSearch.value)" [(ngModel)]="filterTerm"></ion-searchbar>
 
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col size-lg='3' size-md='4' size-sm='6' size='12' *ngFor="let recipt of recipes | filter: filterTerm">
+      <ion-col size-lg='3' size-md='4' size-sm='6' size='12' *ngFor="let recipt of characters | filter: filterTerm">
         <ion-card (click)="openModal(recipt)">
           <img src='{{recipt.recipe.image}}' alt="">
           <ion-card-header>

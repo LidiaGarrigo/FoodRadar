@@ -1,5 +1,26 @@
 # FoodRadar
 
+## DÍA 7:
+
+**¿Qué hemos hecho hoy?**
+* Buscar información sobre la extracción de datos desde Firebase. 
+* Buscar información sobre SplashScreen y hacer pruebas a parte del proyecto.
+
+**¿Qué haremos mañana?**
+* Splash Screen.
+* Extraer datos de Firebase para el perfil.
+
+## DÍA 6:
+
+**¿Qué hemos hecho hoy?**
+* Crear la página de favoritos.
+* Probar otras maneras de leer por Scanner.
+
+**¿Qué haremos mañana?**
+* Splash Screen.
+* Extraer datos de Firebase para el perfil.
+
+
 ## DÍA 5:
 
 **¿Qué hemos hecho hoy?**
