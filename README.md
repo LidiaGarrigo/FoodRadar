@@ -4,7 +4,7 @@
 
 **¿Qué hemos hecho hoy?**
 * Funcionalidad de favoritos.
-* Búsqueda de recetas por defecto y al introducir una palabra y darle a intro.
+* Muestra de recetas por defecto, y muestra de recetas al introducir una palabra y darle a intro.
 * Cambiar la funcionalidad de Scanner de QR a código de barras.
 
 **¿Qué haremos mañana?**

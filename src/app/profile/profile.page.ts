@@ -37,6 +37,8 @@ export class ProfilePage implements OnInit {
 
   ngOnInit() {
     this.photoService.loadSaved();
+    const usuario = this.fs.getUser();
+    console.log(usuario);
   
   }
 
