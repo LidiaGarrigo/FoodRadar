@@ -10,15 +10,7 @@ import java.util.ArrayList;
 public class MainActivity extends BridgeActivity {
   @Override
   public void onCreate(Bundle savedInstanceState) {
-
-    try {
-      Thread.sleep(2000);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
-
     setTheme(R.style.AppTheme);
-
     super.onCreate(savedInstanceState);
 
     // Initializes the Bridge
