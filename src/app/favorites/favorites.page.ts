@@ -18,7 +18,8 @@ export class FavoritesPage implements OnInit {
   public recipes = [];
   filterTerm: string;
   recetas: any;
-  
+  avatar = 'assets/icon/avatar.png';
+
   @Input() recipt: any;
   favorite: boolean = false;
 

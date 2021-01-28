@@ -13,7 +13,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
- <!--  <ion-card>
+  <ion-card>
     <ion-img src="assets/icon/codigo.jpg" style="width: 350px;"></ion-img>
   
   <ion-button (click)='startScan()' color='warning'>
@@ -25,13 +25,9 @@
     &nbsp;Reset
 </ion-button>
 
-<ion-button routerLink='/recipes' color='warning'>
-  <ion-icon name="receipt-outline"></ion-icon>
-  &nbsp;Recipes
-</ion-button>
 <ion-button (click)='stopScan()' color='warning' *ngIf='scanActive'>
   <ion-icon name="stop-circle-outline"></ion-icon>
-  &nbsp;Stop Me!
+  &nbsp;Stop!
 </ion-button>
 <div class="scanner">
   <video #video [hidden]="!scanActive" width='100%'></video>
@@ -48,10 +44,10 @@
 <ion-card-content>
 {{scanResult}}
 </ion-card-content>
-</ion-card> -->
+</ion-card>
 
   
-<div class="square surround-cover">
+<!-- <div class="square surround-cover">
   <div class="barcode-scanner--area--outer surround-cover">
     <div class="barcode-scanner--area--inner"></div>
       </div>
@@ -63,6 +59,6 @@
 <ion-button (click)='stopScan()' color='warning' expand='full'>
   <ion-icon name="stop-circle-outline"></ion-icon>
   &nbsp;Stop Me!
-</ion-button>
+</ion-button> -->
 
 </ion-content>

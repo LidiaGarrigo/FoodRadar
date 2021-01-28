@@ -1,5 +1,7 @@
+/* import { HttpClient } from '@angular/common/http'; */
 import { Injectable } from '@angular/core';
 import { Plugins } from '@capacitor/core';
+/* import { Observable } from 'rxjs'; */
 const { BarcodeScanner } = Plugins;
 
 @Injectable({
@@ -9,6 +11,18 @@ export class ScannerService {
 
  codigo = 'https://world.openfoodfacts.org/api/v0/product[barcode].json';
 
+//////////// FUNCIONALIDAD CÓDIGO DE BARRAS - LECTOR NUMEROS ////////////
+
+/*  API_URL = "https://world.openfoodfacts.org/api/v0/${query}/.json"
+    query = '';
+  constructor(private http: HttpClient) { }
+  getProducts(): Observable<any>{
+    return this.http.get(this.API_URL);
+  }
+  searchProducts(query = ''){
+    return this.http.get(`${this.API_URL}/${query}/`);
+  } */
+  
   constructor() { }
 
   async startScan() {
@@ -43,7 +57,6 @@ export class ScannerService {
       BarcodeScanner.showBackground();
       BarcodeScanner.stopScan();
   };
-
-
 }
+
 }

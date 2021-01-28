@@ -46,7 +46,7 @@
         <input type="hidden" formControlName='image'>
       </form>
       <ion-button expand='block' fill='outline' *ngIf='!mostrar' (click)="edit()">EDIT</ion-button>
-      <ion-button expand='block' fill='outline' type="submit" [disabled]="!profileForm.valid" *ngIf='mostrar'>Submit</ion-button>
+      <ion-button expand='block' fill='outline' type="submit" [disabled]="!profileForm.valid" *ngIf='mostrar' (click)="edit()">Submit</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

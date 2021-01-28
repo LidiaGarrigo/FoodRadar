@@ -1,9 +1,9 @@
-import { ScannerService } from './../services/Scanner.service';
+/* import { ScannerService } from './../services/Scanner.service'; */
 import { FirebaseService } from 'src/app/services/firebase.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { LoadingController, ToastController } from '@ionic/angular';
-/* import jsQR from 'jsqr';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx'; */
+import jsQR from 'jsqr';
+/* import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx'; */
 
 
 @Component({
@@ -12,45 +12,10 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx'; */
   styleUrls: ['./scanner.page.scss'],
 })
 export class ScannerPage implements OnInit {
+  
   data: any;
-  constructor(
-    private fs: FirebaseService,
-    private toastCtrl: ToastController,
-    private loadingCtrl: LoadingController,
-    private scannerService: ScannerService) { }
 
-  ngOnInit(): void {
-    
-    /* throw new Error('Method not implemented.'); */
-
-/*     this.barcodeScanner.scan().then(barcodeData => {
-      console.log('Barcode data', barcodeData);
-    }).catch(err => {
-      console.log('Error', err);
-    }); */
-}
-scan(){
-  this.scannerService.startScan();
-}
-stopScan() {
-  this.scannerService.stopScanner();
-}
-
-/*   scan() {
-    this.data = null;
-    this.barcodeScanner.scan().then(barcodeData => {
-      console.log('Barcode data', barcodeData);
-      this.data = barcodeData;
-    }).catch(err => {
-      console.log('Error', err);
-    });
-  } */
-
-  onLogout() {
-    this.fs.logout();
-  }
-
- /* scanActive = false;
+  scanActive = false;
   scanResult = null;
 
   @ViewChild('video', { static: false }) video: ElementRef;
@@ -60,10 +25,54 @@ stopScan() {
   canvasElement: any;
   loading: HTMLIonLoadingElement;
   canvasContext: any;
- */
+
+  constructor(
+    private fs: FirebaseService,
+    private toastCtrl: ToastController,
+    private loadingCtrl: LoadingController,
+    /* private scannerService: ScannerService */) { }
+
+  ngOnInit(): void {
+    
+    throw new Error('Method not implemented.');
+
+/*     this.barcodeScanner.scan().then(barcodeData => {
+      console.log('Barcode data', barcodeData);
+    }).catch(err => {
+      console.log('Error', err);
+    }); */
+}
+
+//////////// FUNCIONALIDAD CÓDIGO DE BARRAS - LECTOR NUMEROS ////////////
+
+/* ngOnInit() {
+  this.scannerService.getProducts()
+  .subscribe((data) => this.product = data?.product.image_url);
+}
+getProductFromService(): void{
+  this.scannerService.searchProducts(this.query).pipe(
+    take(1)).subscribe((res:any)=>{
+      console.log('res',res);
+    this.product = [...res.product.image_url];
+    console.log('product image',this.product);
+  });
+} */
+
+//////////// CÓDIGO DE BARRAS ////////////
+
+/* scan(){
+  this.scannerService.startScan();
+}
+stopScan() {
+  this.scannerService.stopScanner();
+} */
 
 
-  /* ngAfterViewInit() {
+  onLogout() {
+    this.fs.logout();
+  }
+
+  ngAfterViewInit() {
     this.videoElement = this.video.nativeElement;
     this.canvasElement = this.canvas.nativeElement;
     this.canvasContext = this.canvasElement.getContext('2d');
@@ -153,7 +162,7 @@ stopScan() {
       }]
     });
     toast.present();
-  }  */
+  } 
 }
 
 
