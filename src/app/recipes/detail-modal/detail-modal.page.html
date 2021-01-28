@@ -20,7 +20,7 @@
           <ion-button [hidden]='favorite' (click)="addToFavorites()">
             <ion-icon name="heart-outline" slot="icon-only" color="danger" ></ion-icon>
           </ion-button>
-          <ion-button *ngIf='favorite' (click)="deleteFav()" > <!-- (click)="deleteFav()" -->
+          <ion-button *ngIf='favorite' (click)="deleteFav()" >
             <ion-icon name="heart" slot="icon-only" color="danger"></ion-icon>
           </ion-button>
         </ion-buttons>

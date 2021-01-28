@@ -31,6 +31,7 @@ export class DetailModalPage implements OnInit{
     await this.modalController.dismiss({
       /*   'ion-card': this.X.value */
     });
+    window.location.reload();
   }
 
   addToFavorites() {

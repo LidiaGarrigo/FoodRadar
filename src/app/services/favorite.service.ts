@@ -11,12 +11,7 @@ const { Storage } = Plugins;
 })
 export class FavoriteService {
 
-  
-
-constructor() { 
-}
-
-
+constructor() { }
 
 async addFavorite(label: any): Promise<void>{
   let result: any = await this.getAllFavoriteRecipes();
@@ -51,32 +46,7 @@ async deleteFavorite(label: any){
       console.log(result);
     }
   }
-  return Storage.set({key:'favoriteRecipes', value: JSON.stringify(result)});
-
+  return Storage.set({key: 'favoriteRecipes', value: JSON.stringify(result)});
 }
 
-/* async getAllFavoriteFilms(): Promise<{value:any}> {
-  const ret = await Storage.get({key: 'favoriteFilms'});
-
-  return JSON.parse(ret.value);
-}
-
-async favoriteFilm(filmId){
-  let result: any = await this.getAllFavoriteFilms();
-//TODO: Utilizar set en lugar de array
-  if(result) {
-    result.push(filmId);
-
-    return Storage.set({key:'favoriteFilms', value: JSON.stringify(result)});
-
-  } else {
-    return Storage.set({key:'favoriteFilms', value: JSON.stringify([filmId])});
-  }
-}
-
-async isFavorite(filmId){
-  let result: any = await this.getAllFavoriteFilms();
-  return result && result?.indexOf(filmId)>=0;
-}
- */
 }

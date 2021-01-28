@@ -1,6 +1,6 @@
 import { FirebaseService } from 'src/app/services/firebase.service';
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController, ModalController } from '@ionic/angular';
+import { ActionSheetController} from '@ionic/angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Photo, PhotoService } from '../services/photo.service';
@@ -20,7 +20,6 @@ export class ProfilePage implements OnInit {
 
   constructor(
     private fs: FirebaseService,
-    public modalController: ModalController,
     private fb: FormBuilder,
     public photoService: PhotoService,
     public actionSheetController: ActionSheetController,
@@ -38,20 +37,13 @@ export class ProfilePage implements OnInit {
 
   ngOnInit() {
     this.photoService.loadSaved();
+  
   }
 
   logForm() {
     this.profileForm.get('image').setValue(this.img);
     console.log(this.profileForm.value);
     this.formService.writeStorage(this.profileForm.value);
-    this.closeModal();
-  }
-
-  async closeModal() {
-    await this.modalController.dismiss({
-      'form': this.profileForm.value
-    });
-    window.location.reload();
   }
 
   public async showActionSheet(photo: Photo, position: number) {

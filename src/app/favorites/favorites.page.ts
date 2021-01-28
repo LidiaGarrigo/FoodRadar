@@ -4,7 +4,8 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { RecipesService } from '../services/recipes.service';
 import { DetailModalPage } from '../recipes/detail-modal/detail-modal.page';
-
+import { Plugins } from '@capacitor/core';
+const { Storage } = Plugins;
 
 
 @Component({
@@ -15,8 +16,8 @@ import { DetailModalPage } from '../recipes/detail-modal/detail-modal.page';
 export class FavoritesPage implements OnInit {
 
   public recipes = [];
-
   filterTerm: string;
+  recetas: any;
   
   @Input() recipt: any;
   favorite: boolean = false;
@@ -25,15 +26,23 @@ export class FavoritesPage implements OnInit {
     private RecipeService: RecipesService,
     private modalController: ModalController,
     private fs: FirebaseService,
-    private favoriteService: FavoriteService) {  }
-
-    ngOnInit() {
-      /* this.RecipeService.getRecipes$()
-      .subscribe((data) => this.recipes = data.hits); */
-
-      /* console.log(this.recipt.recipe.label); */
-
+    private favoriteService: FavoriteService) {  
+      /* this.showFav(); */
     }
+
+    async ngOnInit() {
+      this.recetas = await this.favoriteService.getAllFavoriteRecipes();
+      console.log(this.recetas);
+      this.recetas.forEach(label => { 
+        this.RecipeService.searchCharacters(label)
+        .subscribe((data: any) => this.recipes.push(data.hits[0]));
+      });
+    }
+   /*  showFav(){
+     const mostrar = localStorage.getItem('favoriteRecipes');
+     console.log(mostrar);
+
+    } */
     
     async openModal(recipt){
       const modal = await this.modalController.create({
